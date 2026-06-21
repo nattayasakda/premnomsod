@@ -371,13 +371,13 @@ a {
 .grid-item {
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .grid-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.12);
 }
 
 .grid-item:nth-child(1) { grid-column: span 8; grid-row: span 2; }
@@ -386,6 +386,7 @@ a {
 .grid-item:nth-child(4) { grid-column: span 12; grid-row: span 1; }
 
 .img-wrapper {
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -395,11 +396,12 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.8s ease;
 }
 
 .grid-item:hover .img-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    filter: brightness(1.05);
 }
 
 .info-card {
@@ -434,8 +436,8 @@ a {
 .menu-card {
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: var(--white);
     display: flex;
     flex-direction: column;
@@ -443,11 +445,12 @@ a {
 
 .menu-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .menu-img {
-    height: 250px;
+    position: relative;
+    height: 260px;
     overflow: hidden;
 }
 
@@ -455,11 +458,11 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .menu-card:hover .menu-img img {
-    transform: scale(1.08);
+    transform: scale(1.1) rotate(1deg);
 }
 
 .menu-info {
